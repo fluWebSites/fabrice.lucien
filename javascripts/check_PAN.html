@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML>
+
+<HEAD>
+
+<TITLE>Checking PAN</TITLE>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+
+<SCRIPT LANGUAGE="JavaScript" type="text/javascript">
+<!--
+
+	var encrypt_it = true;
+
+	function isCreditCard(st)
+	{
+		// Encoding only works on cards with less than 19 digits
+		if (st.length > 19)
+			return (false);
+
+		sum = 0; 
+		mul = 1; 
+		l = st.length;
+		for (i = 0; i < l; i++) 
+		{
+			digit = st.substring(l-i-1,l-i);
+			tproduct = parseInt(digit ,10)*mul;
+			if (tproduct >= 10)
+				sum += (tproduct % 10) + 1;
+			else
+				sum += tproduct;
+			if (mul == 1)
+				mul++;
+			else
+				mul--;
+		}
+
+		if ((sum % 10) == 0)
+			return (true);
+		else
+			return (false);
+	}
+
+	function getCCNum(default_val)
+	{
+		msg = 'Please enter your credit card number here. ' + 'It will be ' + ((encrypt_it) ? "encrypted and then " : "") + 'put into the credit card field of the form ' + 'after it is validated.';
+		return prompt(msg,default_val);
+	}
+
+	// takes in a credit card number, adds one to each digit
+	// (9 becomes 0), and then returns the encrypted credit
+	// card number with an 'e' tacked on to the end to signal
+	// the number has been encrypted
+	function encrypt(val)
+	{
+		val = "" + val;
+		var result = "";
+		for (i=0;i<val.length;i++)
+		{
+			character = val.charAt(i);
+			if ("0123456789".indexOf(character) != -1)
+			{
+				character = parseInt(character);
+				character = (character+1)%10;
+			}
+			result += character;
+		}
+		if (result != "")
+			result += "e";
+		return result;
+	}
+
+	function unencrypt(val) 
+	{
+		val = "" + val;
+		for (n=0;n<9;n++)
+			val = encrypt(val);
+		return (val.substring(0,val.indexOf('e')));
+	}
+
+	function strip(val) 
+	{
+		val = "" + val;
+		if (!val)
+			return "";
+		var result = "";
+		for (i=0;i<val.length;i++) {
+			character = val.charAt(i);
+		if ("0123456789".indexOf(character) != -1)
+			result += character;
+		}
+		return result;
+	}
+
+	var last_entry = "";
+
+	function doCCStuff(form_element) 
+	{
+		if (blur_reset)
+		{
+			last_entry = form_element.value;
+
+			if (last_entry && last_entry.indexOf('e') != -1)
+				last_entry = unencrypt(last_entry);
+
+			entry = getCCNum(last_entry);
+
+			stripped_entry = strip(entry);
+
+			while (entry && (!isCreditCard(stripped_entry)))
+			{
+				alert('The credit card number you entered could not be ' + 'validated. Please check the number and try again.');
+				last_entry = entry;
+				entry = getCCNum(last_entry);
+				stripped_entry = strip(entry);
+			}
+		
+			if (entry) 
+			{
+				if (encrypt_it)
+					form_element.value = encrypt(entry);
+				else
+					form_element.value = entry;
+			}
+
+			blur_form(form_element);
+		}
+		return false;
+	}
+
+	var blur_reset = true;
+
+	function blur_form(form_element) 
+	{
+		form_element.blur();
+		blur_reset = false;
+		setTimeout("blur_reset=true",2000);
+	}
+
+// -->
+</SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript" type="text/javascript">
+	<!-- Begin
+	jsver = "1.0";
+	// End -->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript1.1" type="text/javascript">
+	<!-- Begin
+	jsver = "1.1";
+	// End -->
+</SCRIPT>
+<SCRIPT Language="JavaScript1.2" type="text/javascript">
+	<!-- Begin
+	jsver = "1.2";
+	// End -->
+</SCRIPT>
+<SCRIPT Language="JavaScript1.3" type="text/javascript">
+	<!-- Begin
+	jsver = "1.3";
+	// End -->
+</SCRIPT>
+
+</HEAD>
+	
+<BODY bgcolor="#87afd7">
+
+<!-- begin CSS FILE CHOICE -->
+<script language="JavaScript" type="text/javascript"><!--
+	document.write("<LINK REL=stylesheet HREF='../win.css' TYPE='text/css'>");
+// --></script>
+<!-- end CSS FILE CHOICE -->
+
+<table border=0 width="100%" cellpadding="0" cellspacing="3" class=bluebckg align=center>
+	<tr><td width="50%" valign="middle" align=center><table border=0 width="240" cellpadding="0" cellspacing="2">
+		<TR><TD ALIGN=CENTER class=content><B>Luhn Mod-10 test<br>&nbsp;</B></TD></TR>
+		<TR><TD class=normal>
+			<form action=this>
+				Try to enter a credit card number and see if it passes the test :<br>&nbsp;
+				<center><input type="text" name="cc_num" onFocus="return doCCStuff(this)"></center>
+			</form>
+		</TD></TR>
+	</table></td></tr>
+</table>
+
+</BODY>
+
+</HTML>

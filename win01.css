@@ -1,0 +1,276 @@
+//Rouge vif background-color : #f93200;
+//Marron background-color : #d3990e;
+//Marron-orange 1 background-color : #ffbe4a;
+//Marron-orange 2 background-color : #ffcc00;
+//Marron-orange 3 background-color : #ff9900;
+//Marron tres light background-color : #cdc89d; 
+//Marine 1 background-color : #0041b5;
+//Marine 2 background-color : #333399;
+//Bleu moyen background-color : #6699cc;
+//Bleu foncé background-color : #547FA2;
+//Bleu clair background-color : #87afd7; 
+//Vert fonce un peu froid background-color : #9bbe8e; 
+//Vert light un peu froid  background-color : #b3cbab; 
+////Vert tres light un peu froid 1  background-color : #d3e2c8; 
+////Vert tres light un peu froid 2 background-color : #d5e2cf; 
+//Vert moyen background-color : #95b689;
+//Vert herbe clair background-color : #b4e194;
+//Vert herbe foncé 1 background-color : #82C46C;
+//Vert herbe foncé 2 background-color : #86c249;
+
+a {
+font-size : 9pt; 
+line-height : 11pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+font-weight : bold; 
+} 
+a.color1 {
+font-size : 9pt; 
+line-height : 11pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+font-weight : bold; 
+color : #ffffff; 
+} 
+a.color1-inline {
+font-size : 10pt; 
+line-height : 11pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+font-weight : normal; 
+color : #ffffff; 
+} 
+a.color2 {
+font-size : 9pt; 
+line-height : 11pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+font-weight : bold; 
+color : #000000; 
+} 
+a.color2-inline {
+font-size : 9pt; 
+line-height : 11pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+font-weight : normal; 
+color : #000000; 
+} 
+a.color2-small {
+font-size : 8pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+font-weight : normal; 
+color : #000000; 
+} 
+a.inline {
+font-size : 9pt; 
+line-height : 11pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+font-weight : normal; 
+} 
+a.bigger {
+font-size : 12pt; 
+line-height : 14pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+font-weight : bold; 
+} 
+a.red {
+font-size : 9pt; 
+line-height : 11pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+font-weight : bold; 
+color : #ff0000; 
+} 
+a.nav {
+font-size : 9pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+color : #000000; 
+} 
+a.content {
+font-size : 14pt; 
+line-height : 15pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+color : #0000ff; 
+} 
+.normal {
+font-size : 12pt; 
+line-height : 12pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+color : #000000; 
+} 
+.big {
+font-size : 12pt; 
+line-height : 13pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+color : #000000; 
+} 
+.buy {
+font-size : 9pt; 
+line-height : 11pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+color : #009900; 
+} 
+.red {
+font-size : 12pt; 
+line-height : 13pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+color : #ff0000; 
+font-weight : bold; 
+} 
+.small {
+font-size : 9pt; 
+line-height : 10pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+color : #000000; 
+} 
+.gray {
+font-size : 9pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+color : #999999; 
+} 
+.white {
+font-size : 11pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+color : #ffffff; 
+} 
+.configuration {
+font-size : 10pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+color : #ffffff; 
+} 
+.links {
+font-size : 11pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+color : #ffffff; 
+} 
+.authorname {
+font-size : 10pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+color : #ffffff; 
+} 
+.textcolor2 {
+font-size : 9pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+color : #000000; 
+} 
+.content {
+font-size : 15pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+color : #333399; 
+font-weight : bold; 
+} 
+.contentorangelight{
+font-size : 14pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+color : #ffbc79; 
+font-weight : bold; 
+} 
+.contenttun {
+font-size : 14pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+color : #0041b5; 
+font-weight : bold; 
+} 
+.contentblack {
+font-size : 14pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+color : #000000; 
+font-weight : bold; 
+} 
+.item {
+font-size : 14pt; 
+line-height : 15pt; 
+font-family : calibri, trebuchet MS, verdana, arial, helvetica; 
+color : #000000; 
+font-weight : bold; 
+} 
+.carrot {
+font-size : 9pt; 
+line-height : 11pt; 
+font-family :calibri, trebuchet MS, courier; 
+color : #ff0000; 
+font-weight : bold; 
+} 
+.carrotinv {
+font-size : 9pt; 
+line-height : 11pt; 
+font-family : trebuchet MS, courier; 
+color : #00ffff; 
+font-weight : bold; 
+} 
+.carrotbig {
+font-size : 12pt; 
+font-family : calibri, trebuchet MS; 
+color : #ff0000; 
+font-weight : bold; 
+} 
+
+.blackbckg {
+background-color : #000000; 
+} 
+.whitebckg {
+background-color : #ffffff; 
+} 
+.greenbckg2 {
+background-color : #b4e194; 
+} 
+.greenbckg {
+background-color : #b4e194; 
+} 
+.greenlightbckg {
+background-color : #d5e2cf; 
+} 
+.bluebckg {
+background-color : #87afd7; 
+} 
+.brownbckg {
+background-color : #cdc89d; 
+}
+.orangelightbckg {
+background-color : #ffbc79;
+}
+.yellowlightbckg {
+background-color : #ffffa6;
+} 
+.graylightbckg {
+background-color : #e6e6e6;
+} 
+
+.header1 {
+font-size : 18pt; 
+font-family : calibri, lucida sans, trebuchet MS, verdana, arial, helvetica; 
+color : #b4e194; 
+font-weight : bold; 
+} 
+.header1lightgreen {
+font-size : 21pt; 
+font-family : calibri, lucida sans, trebuchet MS, verdana, arial, helvetica; 
+color : #d5e2cf; 
+font-weight : normal; 
+} 
+.header2 {
+font-size : 13pt; 
+font-family : calibri, lucida sans, trebuchet MS, verdana, arial, helvetica; 
+color : #87afd7; 
+font-weight : normal; 
+} 
+.header3 {
+font-size : 15pt; 
+font-family : calibri, lucida sans, trebuchet MS, verdana, arial, helvetica; 
+color : #ffffff; 
+font-weight : bold; 
+} 
+.header3b {
+font-size : 11pt; 
+font-family : calibri, lucida sans, trebuchet MS, verdana, arial, helvetica; 
+color : #ffffff; 
+font-weight : bold; 
+} 
+.header4 {
+font-size : 13pt; 
+font-family : calibri, lucida sans, trebuchet MS, verdana, arial, helvetica; 
+color : #333399; 
+font-weight : bold; 
+} 
+.header5 {
+font-size : 12pt; 
+font-family : calibri, lucida sans, trebuchet MS, verdana, arial, helvetica; 
+color : #333399; 
+font-weight : bold; 
+} 
